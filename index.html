@@ -4,11 +4,55 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gray: '#264653',
+            yellow: '#E76F51',
+
+          }
+        }
+      }
+    }
+  </script>
+
   <title>Bike Store</title>
 </head>
 <body>
-  <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
+ <header class="bg-gray  ">
+
+    <nav class="fixed top-0 left-0 right-0">
+        <div class="flex gap-5 h-20 w-full max-w-6xl mx-auto justify-end items-center">
+            <ul class="flex gap-3">
+                <li class="font-bold font-lg">Home</li>
+                <li class="font-bold font-lg">About Us</li>
+                <li class="font-bold font-lg">Shop</li>
+                <li class="font-bold font-lg">Contact</li>
+            </ul>
+            <button class="bg-yellow px-2 py-2 hover:text-white rounded text-xl text-black font-bold">Log in</button>
+        </div>
+    </nav>
+
+    <!-- banner -->
+    <div class="pt-40 lg:flex w-full max-w-6xl mx-auto gap-16 pb-20 p-5  ">
+        <div class="lg:w-2/4 p-3  ">
+
+            <p class="text-white text-lg">Computer-controlled digital transistorized with electronic advance</p>
+            <h1 class="text-white font-bold text-6xl mt-5">Honda CBR 300R</h1>
+            
+            <p class="text-white text-lg mt-3">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+            <button class="bg-yellow px-2 py-2 hover:text-white rounded text-xl text-black font-bold mt-5">Purchase</button>
+
+        </div class="lg:w-2/4   " >
+        <div>
+            <img src="images/bike-7.png" alt="">
+
+        </div>
+    </div>
+    </div>
+
+ </header>
 </body>
 </html>
