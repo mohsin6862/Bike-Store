@@ -5,6 +5,61 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://kit.fontawesome.com/04b6e0a84e.js" crossorigin="anonymous"></script>
+
+      <!-- FAQ CSS -->
+      <style>
+        details summary::-webkit-details-marker {
+            display: none;
+        }
+
+
+        details[open] summary {
+            background: blue;
+            color: white
+        }
+
+        details[open] summary::after {
+            content: "-";
+        }
+
+        details[open] summary~* {
+            animation: slideDown 0.3s ease-in-out;
+        }
+
+        details[open] summary p {
+            opacity: 0;
+            animation-name: showContent;
+            animation-duration: 0.6s;
+            animation-delay: 0.2s;
+            animation-fill-mode: forwards;
+            margin: 0;
+        }
+
+        @keyframes showContent {
+            from {
+                opacity: 0;
+                height: 0;
+            }
+
+            to {
+                opacity: 1;
+                height: auto;
+            }
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                height: 0;
+                padding: 0;
+            }
+
+            to {
+                opacity: 1;
+                height: auto;
+            }
+        }
+    </style>
   <script>
     tailwind.config = {
       theme: {
@@ -175,6 +230,81 @@
 
 
  </section>
+
+ <!-- FAQ section  -->
+
+ <section class="mt-40">
+    <div class=" ">
+        <h1 class="lg:text-center text-5xl font-bold p-2 ml-5">Frequently Asked  <span class="text-yellow">Any Question</span></h1>
+        
+    </div>
+    <div class="lg:flex w-full lg:max-w-4xl mx-auto gap-3">
+        <div class="lg:w-2/4 mt-20">
+
+
+            <div>
+                <div class='w-full max-w-lg px-10 py-8 mx-auto bg-red-100 rounded-lg shadow-xl'>
+                    <h1 class="text-2xl mb-10 text-center font-bold text-yellow">Our Answer's
+                    </h1>
+                    <!-- question one -->
+                    <details class="w-full bg-red-50 border border-blue-500 cursor-pointer mb-3">
+                        <summary
+                            class="w-full bg-red-50 text-dark flex justify-between px-4 py-3  after:content-['+']">
+                            Difference between flex box and grid?</summary>
+                        <p class="px-4 py-3">
+                            The most difference to know is that flexbox is one-dimensional, while CSS Grid is
+                            two-dimensional. Flexbox lays out items along either the horizontal or the vertical
+                            axis, so we have to decide whether we want a row-based or a column-based layout. The
+                            flexbox cross axis is always perpendicular to the main axis.
+                        </p>
+                    </details>
+                    <!-- question two -->
+                    <details class="w-full bg-red-50 border border-blue-500 cursor-pointer mb-3">
+                        <summary
+                            class="w-full bg-red-50 text-dark flex justify-between px-4 py-3  after:content-['+']">
+                            What is the purpose of media query?</summary>
+                        <p class="px-4 py-3">
+                            Media queries are a feature of CSS that enable webpage content to adapt to different
+                            screen sizes and resolutions. They are a fundamental part of responsive web design and
+                            are used to customize the appearance of websites for multiple devices.
+                    </details>
+                    <!-- question three -->
+
+                    <details class="w-full bg-red-50 border border-blue-500 cursor-pointer mb-3">
+                        <summary
+                            class="w-full bg-red-50 text-dark flex justify-between px-4 py-3 after:content-['+']">
+                            What is the semantic tags?</summary>
+                        <p class="px-4 py-3">
+                            A semantic tag in HTML is a tag whose name clearly describes its purpose and content.
+                            HTML5 introduced several new semantic tags.
+                        </p>
+                    </details>
+                    <!-- question four -->
+
+                    <details class="w-full bg-red-50 border border-blue-500 cursor-pointer mb-3">
+                        <summary
+                            class="w-full bg-red-50 text-dark flex justify-between px-4 py-3  after:content-['+']">
+                            What is css box model and how does it work?
+                        </summary>
+                        <p class="px-4 py-3">
+                            The CSS box model as a whole applies to block boxes and defines how the different parts
+                            of a box — margin, border, padding, and content — work together to create a box that you
+                            can see on a page. Inline boxes use just some of the behavior defined in the box model.
+                        </p>
+                    </details>
+                </div>
+            </div>
+
+
+
+        </div>
+        <div class="lg:w-2/4 mt-20">
+            <img src="images/faq.png" alt="">
+
+        </div>
+    </div>
+
+</section>
 
 
 </body>
